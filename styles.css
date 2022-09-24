@@ -85,14 +85,12 @@
     background: #ffffff90;
     height: 70px;
     width: 100%;
+
   }
-  nav ul{
-    float:center;
-    margin-right: 20px;
-  }
+ 
   nav ul li{
     display: inline-block;
-    line-height: 80px;
+    line-height: 70px;
     margin: 0 5px;
   }
   nav ul li a{
@@ -128,13 +126,19 @@ footer {
   margin: 50px;
 }
 
-.section4 {
+#section4 {
+  padding-left: 50px;
+  padding-right: 50px;
+
   height: 60vh;
   justify-content: center;
   margin-top: 220px;
   padding-bottom: 50px;
 }
+
+
 .section3, .section4 {
+
   width: 100vw;
   display: flex;
   align-items: center;
@@ -206,4 +210,17 @@ a {
 
 .item {
   margin: 0 20px;
+}
+
+.resume, .resume:hover {
+  transition: all .3s ease;
+}
+.resume {
+  padding: 16px 28px;
+  cursor: pointer;
+  background: #000;
+  font-size: 18px;
+  border: 2px solid #000;
+  margin: 20px 20px 20px -660px;
+  color: #fff;
 }
