@@ -223,9 +223,11 @@ footer {
   font-size: 23px;
 }
 
-a {
+p a {
   border-bottom: 1px solid #17202d;
   padding-bottom: 0.3rem;
+  color: inherit;
+  font-style: italic;
 }
 
 .med {
