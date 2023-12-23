@@ -63,5 +63,23 @@ header img{
 }
 
 .nav-links li a:hover{
-    color: darkgray;
+    color: orange;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.all-heading{
+    display: flex;
+    font-size: 60px;
+    color: orange;
+}
+
+.Contact {
+
 }
