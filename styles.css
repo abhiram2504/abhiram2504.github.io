@@ -1,88 +1,103 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Home Section with particles.js */
+#home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
 #particles-js {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
-    background-image: url("black.jpeg");
-    background-size: cover;
-    background-position: center;
-    z-index: -1; /* Ensure particles are behind content */
+    width: 100%;
+    background-color: #000;
+    z-index: 1;
 }
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+.home-center {
+    position: absolute; /* Center text horizontally and vertically */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
 }
 
-li, a, button{
-    font-family: "Montserrat";
-    font-weight: 500;
-    font-size: 16px;
+/* Typewriter Animation */
+.typewriter {
+    font-size: 3rem; /* Adjust as needed */
+    overflow: hidden; /* Ensures text doesn't overflow */
+    border-right: .15em solid #f39c12; /* Cursor effect */
+    white-space: nowrap; /* Prevents text wrapping */
+    margin: 0 auto; /* Center alignment */
+    letter-spacing: .15em; /* Adjust spacing between letters */
+    animation: typing 4s steps(40, end) infinite, blink-caret .75s step-end infinite;
+    color: white;
+}
+
+/* Typewriter Animation Keyframes */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Blinking Caret Animation Keyframes */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #f39c12;
+    }
+}
+
+/* Resume Button */
+.resume-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #7a7a7a, #fbf1e8);
     color: rgb(255, 255, 255);
     text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
+.resume-button:hover {
+    background-color: #e67e22;
+    transform: translateY(-5px);
 }
 
-.home-center{
-    position: absolute;
-    top: 50%;
-    margin-left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 60px;
-    padding: auto;
-    color: aliceblue;
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
 }
 
-header img{
-    height: 40px;
-    width: 40px;
-    margin-left: 0%;
-}
-
-.logo{
-    cursor: pointer;
-    margin-right: auto;
-}
-
-.nav-links {
-    list-style: none;
-}
-
-.nav-links li{
+.social-icon {
     display: inline-block;
-    padding: 0px 20px;
+    margin: 0 10px;
 }
 
-.nav-links li a{
-    transition: all 0.3s ease 0s;
+.social-icon img {
+    width: 40px; /* Adjust icon size */
+    height: auto;
+    vertical-align: middle;
 }
 
-.nav-links li a:hover{
-    color: orange;
-}
-
-section{
-    min-height: 100vh;
-    padding: 10rem 9% 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.all-heading{
-    display: flex;
-    font-size: 60px;
-    color: orange;
-}
-
-.Contact {
-
+.social-icon img:hover {
+    opacity: 0.8;
 }
