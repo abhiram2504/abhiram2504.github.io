@@ -1,124 +1,183 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhiram Rustagi | Software Engineer & AI Builder</title>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,600,700' rel='stylesheet'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio of Abhiram Rustagi, a software engineer building reliable data, AI, and full-stack systems.">
+    <meta name="theme-color" content="#f3f3f0">
+    <title>Abhiram Rustagi — Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
-
-    <script src="particles.js"></script>
-    <script src="app.js" async></script>
+    <script src="app.js" defer></script>
 </head>
 <body>
-    <!-- Hero Section -->
-    <div id="home">
-        <div id="particles-js">
-            <div class="home-center">
-                <span class="eyebrow">Software Engineer</span>
-                <h1 class="typewriter">Hey, Abhi Here!</h1>
-                <p class="tagline">Do what excites you.</p>
-                <div class="social-icons">
-                    <a href="https://github.com/abhiram2504" target="_blank" class="social-icon">
-                        <img src="images/github-mark.png" alt="GitHub">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+        <a class="brand" href="#home" aria-label="Go to the top">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-label">Abhiram Rustagi</span>
+        </a>
+
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation">
+            <span>Menu</span>
+            <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+        </button>
+
+        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="hero section-shell" id="home" aria-labelledby="hero-title">
+            <div class="hero-copy" data-reveal>
+                <p class="eyebrow">Software Engineer <span>—</span> Columbus, Ohio</p>
+                <h1 id="hero-title">Abhiram<br><span>Rustagi.</span></h1>
+            </div>
+
+            <figure class="hero-canvas" data-reveal>
+                <img class="hero-portrait" src="images/abhiram_pic.jpeg" alt="Abhiram Rustagi with a golden retriever">
+                <figcaption class="canvas-note">Useful systems. Thoughtfully built.</figcaption>
+            </figure>
+
+            <a class="scroll-cue" href="#work" aria-label="Scroll to selected work">
+                <span>Scroll to explore</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 4v15M6.5 13.5 12 19l5.5-5.5"/>
+                </svg>
+            </a>
+        </section>
+
+        <section class="work section-shell" id="work" aria-labelledby="work-title">
+            <div class="section-heading" data-reveal>
+                <p>01</p>
+                <h2 id="work-title">Selected work</h2>
+                <span>Products, research, and data systems.</span>
+            </div>
+
+            <div class="project-grid">
+                <a class="project project-featured" href="https://github.com/abhiram2504/climbcom-starter" target="_blank" rel="noreferrer" data-reveal>
+                    <div class="project-art project-art-one" aria-hidden="true">
+                        <span class="project-index">01</span>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                    <div class="project-caption">
+                        <div>
+                            <h3>climbCom</h3>
+                            <p>A community platform for climbers, with text classification that keeps posts on topic.</p>
+                        </div>
+                        <span>React · Firebase · ML</span>
+                    </div>
+                </a>
+
+                <article class="project" data-reveal>
+                    <div class="project-art project-art-two" aria-hidden="true">
+                        <span class="project-index">02</span>
+                        <span class="project-arrow project-dot">•</span>
+                    </div>
+                    <div class="project-caption">
+                        <div>
+                            <h3>cityMover</h3>
+                            <p>A first-place Data for Good project using KMeans to pair Ohio cities for relocating families.</p>
+                        </div>
+                        <span>Data · KMeans · Social impact</span>
+                    </div>
+                </article>
+
+                <a class="project" href="https://kb.osu.edu/items/347310d1-d04e-4765-bf1e-ae58190bc016" target="_blank" rel="noreferrer" data-reveal>
+                    <div class="project-art project-art-three" aria-hidden="true">
+                        <span class="project-index">03</span>
+                        <span class="project-arrow">↗</span>
+                    </div>
+                    <div class="project-caption">
+                        <div>
+                            <h3>Effective Routing in PCNs</h3>
+                            <p>Honors research exploring routing strategies that increase throughput in blockchain payment networks.</p>
+                        </div>
+                        <span>Research · Algorithms · Networks</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="about section-shell" id="about" aria-labelledby="about-title">
+            <div class="section-heading" data-reveal>
+                <p>02</p>
+                <h2 id="about-title">About</h2>
+                <span>Engineer, researcher, and lifelong builder.</span>
+            </div>
+
+            <div class="about-frame" data-reveal>
+                <div class="about-copy">
+                    <p class="about-kicker">A little about me</p>
+                    <h3>I turn ideas into code.<br>Code into products.</h3>
+                    <p class="about-summary">I’m a software engineer at Nationwide, building containerized workflow dashboards that give engineering teams clearer visibility into data pipelines. My work spans data science, infrastructure, research, and full-stack products.</p>
+
+                    <dl class="about-facts">
+                        <div>
+                            <dt>Now</dt>
+                            <dd>Software Engineer · Nationwide</dd>
+                        </div>
+                        <div>
+                            <dt>Education</dt>
+                            <dd>M.S. CSE · Ohio State · 3.9</dd>
+                        </div>
+                        <div>
+                            <dt>Focus</dt>
+                            <dd>Data · AI · Infrastructure</dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <figure class="about-photo">
+                    <img src="images/abhiram_pic.jpeg" alt="Portrait of Abhiram Rustagi">
+                </figure>
+            </div>
+
+            <div class="experience" data-reveal>
+                <div class="experience-intro">
+                    <p>Experience</p>
+                    <span>From production systems to research.</span>
+                </div>
+                <ol class="experience-list">
+                    <li><span>Nationwide</span><strong>Software Engineer</strong><time>2025 — Now</time></li>
+                    <li><span>Vertiv</span><strong>Data Science Intern</strong><time>2025</time></li>
+                    <li><span>The Ohio State University</span><strong>Data Engineer · Research Assistant</strong><time>2023 — 2025</time></li>
+                    <li><span>Velocity Software</span><strong>Software Engineering Intern</strong><time>2024</time></li>
+                    <li><span>OCLC</span><strong>Data Science Intern</strong><time>2023</time></li>
+                </ol>
+            </div>
+
+            <p class="skills-line" data-reveal><span>Toolkit</span> Java · Python · React · JavaScript · SQL · Docker · Kubernetes · AWS</p>
+        </section>
+
+        <section class="contact section-shell" id="contact" aria-labelledby="contact-title">
+            <div class="contact-inner" data-reveal>
+                <p>03 — Contact</p>
+                <h2 id="contact-title">Let’s build<br><span>something useful.</span></h2>
+                <div class="contact-links">
+                    <a href="mailto:rustagi.23@buckeyemail.osu.edu">
+                        <span>Email</span>
+                        <span>rustagi.23@buckeyemail.osu.edu ↗</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/abhiramrustagi/" target="_blank" class="social-icon">
-                        <img src="images/linkd-icon.png" alt="LinkedIn">
+                    <a href="https://www.linkedin.com/in/abhiramrustagi/" target="_blank" rel="noreferrer">
+                        <span>LinkedIn</span>
+                        <span>Connect ↗</span>
+                    </a>
+                    <a href="https://github.com/abhiram2504" target="_blank" rel="noreferrer">
+                        <span>GitHub</span>
+                        <span>View work ↗</span>
                     </a>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
-    <!-- Overview Section -->
-    <section class="overview" id="overview">
-        <div class="overview-inner">
-            <p class="section-label">Overview</p>
-            
-            <div class="overview-grid">
-                <div class="overview-copy">
-                    <h2>I turn ideas into code. Code into products.</h2>
-                    <p>
-                        I'm a full-stack developer obsessed with building systems that are not just fast and scalable, but actually useful.
-                        My work spans from AI-powered tools to production infrastructure, with a focus on clean architecture and real-world impact.
-                    </p>
-                    <p>
-                        I'm especially drawn to the intersection of software engineering and intelligent systems — whether that's building 
-                        resilient backends, experimenting with LLMs, or designing systems that can scale from zero to millions of users. 
-                        I believe the best code is code that ships, learns from users, and improves constantly.
-                    </p>
-                    <p>
-                        Currently exploring: AI agents, system design patterns, and the craft of sustainable software engineering.
-                    </p>
-                </div>
-
-                <div class="overview-cards">
-                    <div class="info-card">
-                        <h3>🛠️ What I Build</h3>
-                        <p>Scalable backends, full-stack applications, AI tools, and frameworks that make complex problems simple.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>⚡ How I Work</h3>
-                        <p>Fast iteration, thoughtful architecture, and pragmatic solutions. I ship early and improve based on feedback.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>🚀 What Drives Me</h3>
-                        <p>Solving hard problems, learning at the edge, and building things that people actually want to use.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="highlights">
-                <h3>Key Focus Areas</h3>
-                <div class="highlight-grid">
-                    <span class="highlight-tag">Full-Stack Development</span>
-                    <span class="highlight-tag">AI & LLMs</span>
-                    <span class="highlight-tag">System Design</span>
-                    <span class="highlight-tag">DevOps & Infrastructure</span>
-                    <span class="highlight-tag">Clean Architecture</span>
-                    <span class="highlight-tag">Open Source</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tech Stack Section -->
-    <section class="tech-stack" id="stack">
-        <div class="overview-inner">
-            <p class="section-label">Tech & Tools</p>
-            <h2>Languages & Frameworks I use</h2>
-            
-            <div class="tech-grid">
-                <div class="tech-category">
-                    <h4>Languages</h4>
-                    <p>Python • TypeScript • JavaScript • C# • Lisp</p>
-                </div>
-                <div class="tech-category">
-                    <h4>Frontend</h4>
-                    <p>React • Next.js • CSS • HTML5</p>
-                </div>
-                <div class="tech-category">
-                    <h4>Backend</h4>
-                    <p>Node.js • FastAPI • Python • Express</p>
-                </div>
-                <div class="tech-category">
-                    <h4>Tools & DevOps</h4>
-                    <p>Docker • Git • CI/CD • AWS • Linux</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="overview-inner">
-            <p>Always building. Always learning. Let's work on something interesting.</p>
-            <p class="footer-links">
-                <a href="https://github.com/abhiram2504" target="_blank">GitHub</a> • 
-                <a href="https://www.linkedin.com/in/abhiramrustagi/" target="_blank">LinkedIn</a>
-            </p>
-        </div>
+    <footer class="site-footer section-shell">
+        <p>© <span data-year></span> Abhiram Rustagi</p>
+        <a href="#home">Back to top ↑</a>
     </footer>
 </body>
 </html>
