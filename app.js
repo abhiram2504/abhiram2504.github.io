@@ -5,7 +5,7 @@ const navLinks = document.querySelectorAll('.site-nav a');
 const revealItems = document.querySelectorAll('[data-reveal]');
 const year = document.querySelector('[data-year]');
 
-year.textContent = new Date().getFullYear();
+if (year) year.textContent = new Date().getFullYear();
 
 const setHeaderState = () => {
     header.classList.toggle('is-scrolled', window.scrollY > 20);

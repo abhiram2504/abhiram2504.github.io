@@ -450,3 +450,185 @@ button { color: inherit; font: inherit; }
     html { scroll-behavior: auto; }
     *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Single-screen portfolio landing page */
+.landing-body {
+    height: 100svh;
+    min-height: 100svh;
+    overflow: hidden;
+}
+
+.landing-body .site-header {
+    top: 1.25rem;
+    width: min(calc(100% - 2rem), 680px);
+    height: 56px;
+    padding: 0 .4rem 0 1rem;
+    border-color: rgba(255, 255, 255, .72);
+    background: rgba(246, 246, 243, .84);
+    box-shadow: 0 14px 38px rgba(18, 18, 18, .08);
+}
+
+.landing-body .menu-button {
+    display: none;
+}
+
+.landing-body .site-nav {
+    position: static;
+    display: flex;
+    margin-left: auto;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+.landing-body .site-nav .play-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .8rem;
+    padding: .72rem 1rem;
+    border: 0;
+    border-radius: 999px;
+    color: #fff;
+    background: var(--ink);
+    transition: background .25s ease, transform .3s var(--ease);
+}
+
+.landing-body .site-nav .play-link::after {
+    display: none;
+}
+
+.landing-body .site-nav .play-link:hover,
+.landing-body .site-nav .play-link:focus-visible {
+    background: var(--blue);
+    outline: none;
+    transform: translateY(-1px);
+}
+
+.landing-main {
+    height: 100%;
+    min-height: 0;
+}
+
+.landing-body .hero {
+    height: 100%;
+    min-height: 0;
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, .75fr);
+    align-items: center;
+    gap: clamp(2.5rem, 7vw, 8rem);
+    padding-top: clamp(6rem, 11vh, 8rem);
+    padding-bottom: clamp(1.5rem, 4vh, 3rem);
+}
+
+.landing-body .hero-copy {
+    align-self: center;
+}
+
+.landing-body .eyebrow {
+    margin-bottom: 1rem;
+}
+
+.landing-body .hero h1 {
+    max-width: 760px;
+    font-size: clamp(4.6rem, 8.2vw, 9rem);
+    line-height: .82;
+}
+
+.landing-body .hero-links {
+    margin-top: clamp(1.5rem, 3vh, 2.25rem);
+}
+
+.landing-body .hero-canvas {
+    align-self: center;
+    justify-self: end;
+    width: auto;
+    height: min(70vh, 680px);
+    max-width: 100%;
+    aspect-ratio: 3 / 4;
+    margin: 0;
+    border-radius: 32px;
+    box-shadow: 0 30px 90px rgba(45, 44, 42, .16);
+}
+
+.landing-body .hero-canvas::after {
+    background: linear-gradient(135deg, transparent 58%, rgba(18, 18, 20, .12));
+}
+
+.landing-body .hero-portrait {
+    object-position: center 50%;
+}
+
+@media (max-width: 900px) {
+    .landing-body .site-header {
+        top: .7rem;
+        width: calc(100% - 1.4rem);
+    }
+
+    .landing-body .hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto minmax(0, 1fr);
+        align-content: center;
+        gap: clamp(1rem, 3vh, 2rem);
+        padding-top: 5.7rem;
+        padding-bottom: 1rem;
+    }
+
+    .landing-body .hero h1 {
+        font-size: clamp(3.7rem, 14vw, 6.8rem);
+        line-height: .8;
+    }
+
+    .landing-body .hero-links {
+        margin-top: 1.35rem;
+    }
+
+    .landing-body .hero-canvas {
+        align-self: stretch;
+        justify-self: stretch;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        aspect-ratio: auto;
+        border-radius: 24px;
+    }
+}
+
+@media (max-width: 520px) {
+    .landing-body .site-header {
+        height: 54px;
+    }
+
+    .landing-body .brand-label {
+        display: inline;
+        font-size: .68rem;
+    }
+
+    .landing-body .hero {
+        gap: 1rem;
+        padding-top: 5.25rem;
+        padding-bottom: .8rem;
+    }
+
+    .landing-body .hero h1 {
+        font-size: clamp(3.3rem, 17vw, 5rem);
+    }
+
+    .landing-body .eyebrow {
+        margin-bottom: .7rem;
+        font-size: .64rem;
+    }
+
+    .landing-body .hero-links a {
+        width: 44px;
+        height: 44px;
+    }
+
+    .landing-body .hero-canvas {
+        border-radius: 20px;
+    }
+}
