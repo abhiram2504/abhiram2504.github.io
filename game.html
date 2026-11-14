@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#f3f3f0">
     <title>Infinite Climb — Abhiram Rustagi</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="game.css?v=4">
     <script src="app.js" defer></script>
     <script src="game.js" defer></script>
 </head>
@@ -26,66 +26,55 @@
         </button>
 
         <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
-            <a href="index.html#about">About</a>
+            <a href="index.html">Home</a>
             <a class="nav-active" href="game.html" aria-current="page">Play</a>
         </nav>
     </header>
 
     <main class="game-main" id="main">
-        <section class="game-hero section-shell" aria-labelledby="game-title">
-            <div class="game-heading" data-reveal>
+        <section class="game-layout section-shell" aria-labelledby="game-title">
+            <header class="game-intro" data-reveal>
                 <p class="eyebrow">Mini game <span>—</span> Infinite Climb</p>
-                <h1 id="game-title">Keep<br><span>climbing.</span></h1>
-            </div>
+                <h1 id="game-title">Keep <span>climbing.</span></h1>
 
-            <div class="game-deck" data-reveal>
-                <p>Move left and right. Land on each hold. The climber handles the jumping—you handle everything else.</p>
-                <span>Arrow keys / A + D / Touch</span>
-            </div>
-        </section>
-
-        <section class="game-stage section-shell" aria-label="Infinite Climb game" data-reveal>
-            <div class="game-toolbar">
-                <div class="hud-item">
-                    <span>Height</span>
-                    <strong id="score">0m</strong>
+                <div class="game-deck">
+                    <p>Move left and right. Land on each hold.</p>
+                    <span>Arrow keys / A + D / Touch</span>
                 </div>
-                <div class="hud-item">
-                    <span>Best</span>
-                    <strong id="best-score">0m</strong>
+            </header>
+
+            <div class="game-stage" aria-label="Infinite Climb game" data-reveal>
+                <div class="game-toolbar">
+                    <div class="hud-item">
+                        <span>Height</span>
+                        <strong id="score">0m</strong>
+                    </div>
+                    <div class="hud-item">
+                        <span>Best</span>
+                        <strong id="best-score">0m</strong>
+                    </div>
+                    <button class="pause-button" id="pause-button" type="button" disabled>Pause</button>
                 </div>
-                <button class="pause-button" id="pause-button" type="button" disabled>Pause</button>
-            </div>
 
-            <div class="canvas-wrap">
-                <canvas id="game-canvas" width="720" height="780" tabindex="0" aria-label="Infinite Climb. Move with the left and right arrow keys or A and D. Land on climbing holds to keep ascending."></canvas>
+                <div class="canvas-wrap">
+                    <canvas id="game-canvas" width="720" height="780" tabindex="0" aria-label="Infinite Climb. Move with the left and right arrow keys or A and D. Land on climbing holds to keep ascending."></canvas>
 
-                <div class="game-overlay" id="game-overlay">
-                    <p id="overlay-kicker">Ready?</p>
-                    <h2 id="overlay-title">The wall goes<br>on forever.</h2>
-                    <p id="overlay-copy">Use the arrow keys, A and D, or the touch controls. Try not to look down.</p>
-                    <button id="start-button" type="button">Start climbing <span aria-hidden="true">↗</span></button>
+                    <div class="game-overlay" id="game-overlay">
+                        <p id="overlay-kicker">Ready?</p>
+                        <h2 id="overlay-title">The wall goes<br>on forever.</h2>
+                        <p id="overlay-copy">Use the arrow keys, A and D, or the touch controls. Try not to look down.</p>
+                        <button id="start-button" type="button">Start climbing <span aria-hidden="true">↗</span></button>
+                    </div>
                 </div>
+
+                <div class="touch-controls" aria-label="Touch controls">
+                    <button type="button" data-direction="left" aria-label="Move left">← <span>Left</span></button>
+                    <button type="button" data-direction="right" aria-label="Move right"><span>Right</span> →</button>
+                </div>
+
+                <p class="game-status sr-only" id="game-status" aria-live="polite">Infinite Climb is ready.</p>
             </div>
-
-            <div class="touch-controls" aria-label="Touch controls">
-                <button type="button" data-direction="left" aria-label="Move left">← <span>Left</span></button>
-                <button type="button" data-direction="right" aria-label="Move right"><span>Right</span> →</button>
-            </div>
-
-            <p class="game-status sr-only" id="game-status" aria-live="polite">Infinite Climb is ready.</p>
-        </section>
-
-        <section class="game-notes section-shell" aria-label="How to play">
-            <p>One rule</p>
-            <h2>Climb forever.<br>Fall once.</h2>
-            <a href="index.html">Return to portfolio <span aria-hidden="true">↗</span></a>
         </section>
     </main>
-
-    <footer class="site-footer section-shell">
-        <p>© <span data-year></span> Abhiram Rustagi</p>
-        <a href="index.html">Portfolio ↑</a>
-    </footer>
 </body>
 </html>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
 </head>
-<body>
+<body class="landing-body">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header" data-header>
@@ -24,15 +24,17 @@
         </button>
 
         <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
-            <a href="#about">About</a>
-            <a href="game.html">Play</a>
+            <a class="play-link" href="game.html">
+                <span>Play</span>
+                <span aria-hidden="true">↗</span>
+            </a>
         </nav>
     </header>
 
-    <main id="main">
+    <main class="landing-main" id="main">
         <section class="hero section-shell" id="home" aria-labelledby="hero-title">
             <div class="hero-copy" data-reveal>
-                <p class="eyebrow">Software Engineer </p>
+                <p class="eyebrow">Software Engineer <span>·</span> Boeing</p>
                 <h1 id="hero-title">Abhiram<br><span>Rustagi.</span></h1>
 
                 <div class="hero-links" aria-label="Contact and social links">
@@ -58,55 +60,8 @@
 
             <figure class="hero-canvas" data-reveal>
                 <img class="hero-portrait" src="images/abhiram-ghibli.png" alt="Hand-painted animated illustration of Abhiram Rustagi with a golden retriever">
-                <figcaption class="canvas-note">Useful systems. Thoughtfully built.</figcaption>
             </figure>
-
-            <a class="scroll-cue" href="#about" aria-label="Scroll to the About section">
-                <span>Scroll to explore</span>
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 4v15M6.5 13.5 12 19l5.5-5.5"/>
-                </svg>
-            </a>
         </section>
-
-        <section class="about section-shell" id="about" aria-labelledby="about-title">
-            <div class="section-heading" data-reveal>
-                <p>01</p>
-                <h2 id="about-title">About</h2>
-                <span>Engineer, researcher, and lifelong builder.</span>
-            </div>
-
-            <div class="about-frame" data-reveal>
-                <div class="about-copy">
-                    <p class="about-kicker">A little about me</p>
-                    <h3>I code and climb</h3>
-                    <p class="about-summary">software engineer during the day and rock climber at night.</p>
-
-                    <dl class="about-facts">
-                        <div>
-                            <dt>Now</dt>
-                            <dd>Software Engineer · Boeing</dd>
-                        </div>
-                        <div>
-                            <dt>Education</dt>
-                            <dd>M.S. CSE · Ohio State</dd>
-                        </div>
-                        <div>
-                            <dt>Focus</dt>
-                            <dd>Code · Climb · Debugging</dd>
-                        </div>
-                    </dl>
-                </div>
-
-            </div>
-
-        </section>
-
     </main>
-
-    <footer class="site-footer section-shell">
-        <p>© <span data-year></span> Abhiram Rustagi</p>
-        <a href="#home">Back to top ↑</a>
-    </footer>
 </body>
 </html>
